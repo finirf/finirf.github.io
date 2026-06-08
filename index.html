@@ -86,7 +86,7 @@
       <div class="col-lg-5">
         <div class="panel profile-panel h-100">
           <div class="profile-photo-wrap">
-            <img src="assets/headshot.svg" width="150" height="150" alt="Roman Fini headshot placeholder" class="profile-photo">
+            <img src="images/headshot.jpg" width="150" height="150" alt="Roman Fini headshot placeholder" class="profile-photo">
           </div>
           <h2 class="profile-name">Roman Fini</h2>
           <p class="profile-role">Student and front-end developer in progress</p>
@@ -107,7 +107,7 @@
           <div class="tracker-card">
             <span class="tracker-label">Page tracker</span>
             <strong id="visitCount">Loading...</strong>
-            <small>Counted with a public tracking API</small>
+            <small>Counted locally in this browser</small>
           </div>
         </div>
       </div>
@@ -120,7 +120,9 @@
             <span class="eyebrow">Skills snapshot</span>
             <h2>Practical front-end skill mix</h2>
           </div>
-          <canvas id="skillsChart" height="300"></canvas>
+          <div class="chart-frame">
+            <canvas id="skillsChart" height="260"></canvas>
+          </div>
           <div class="skill-pills">
             <span class="chip">HTML</span>
             <span class="chip">CSS</span>
@@ -155,7 +157,7 @@
         <div class="panel h-100">
           <div class="section-heading">
             <span class="eyebrow">Text API</span>
-            <h2>JokeAPI refreshes every minute</h2>
+            <h2>JokeAPI loads once per visit</h2>
           </div>
           <div id="jokeStatus" class="feature-status">Loading a fresh joke...</div>
           <p id="jokeText" class="api-copy"></p>

@@ -41,9 +41,6 @@ $(function () {
 
   if (jokeStatus.length && jokeText.length) {
     loadJoke(jokeStatus, jokeText);
-    window.setInterval(function () {
-      loadJoke(jokeStatus, jokeText);
-    }, 60000);
   }
 
   if (dogStatus.length && dogImage.length && refreshDogButton.length) {
@@ -308,12 +305,17 @@ function loadDogImage(statusTarget, imageTarget, buttonTarget) {
 }
 
 function updateVisitorCount(visitCount, visitCountFooter) {
-  $.getJSON('https://api.countapi.xyz/hit/romanfini-waph-project1/homepage').done(function (data) {
-    const count = Number(data.value || 0).toLocaleString();
-    visitCount.text(count);
-    visitCountFooter.text(count);
-  }).fail(function () {
-    visitCount.text('N/A');
-    visitCountFooter.text('N/A');
-  });
+  let visitTotal = 1;
+
+  try {
+    const storedValue = window.localStorage.getItem('romanFiniVisitCount');
+    visitTotal = Number(storedValue || '0') + 1;
+    window.localStorage.setItem('romanFiniVisitCount', String(visitTotal));
+  } catch (error) {
+    visitTotal = 1;
+  }
+
+  const count = visitTotal.toLocaleString();
+  visitCount.text(count);
+  visitCountFooter.text(count);
 }
