@@ -237,7 +237,7 @@ function renderSkillsChart() {
       plugins: {
         legend: {
           labels: {
-            color: '#142033',
+            color: '#e8eef8',
             font: {
               family: 'Space Grotesk'
             }
@@ -247,13 +247,13 @@ function renderSkillsChart() {
       scales: {
         r: {
           angleLines: {
-            color: 'rgba(20, 32, 51, 0.1)'
+            color: 'rgba(232, 238, 248, 0.14)'
           },
           grid: {
-            color: 'rgba(20, 32, 51, 0.1)'
+            color: 'rgba(232, 238, 248, 0.14)'
           },
           pointLabels: {
-            color: '#142033',
+            color: '#e8eef8',
             font: {
               family: 'Space Grotesk',
               size: 12,
@@ -262,7 +262,7 @@ function renderSkillsChart() {
           },
           ticks: {
             backdropColor: 'transparent',
-            color: '#5f6b80',
+            color: '#c6dcff',
             stepSize: 20
           },
           suggestedMin: 0,
