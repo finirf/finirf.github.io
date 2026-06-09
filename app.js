@@ -41,6 +41,9 @@ $(function () {
 
   if (jokeStatus.length && jokeText.length) {
     loadJoke(jokeStatus, jokeText);
+    window.setInterval(function () {
+      loadJoke(jokeStatus, jokeText);
+    }, 60000);
   }
 
   if (dogStatus.length && dogImage.length && refreshDogButton.length) {
