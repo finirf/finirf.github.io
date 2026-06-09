@@ -24,7 +24,6 @@
 html {
   scroll-behavior: auto;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 body {
@@ -39,7 +38,6 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 body::before,
